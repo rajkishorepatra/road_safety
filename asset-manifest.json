@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/road_safety/static/css/main.d15e14b6.css",
+    "main.js": "/road_safety/static/js/main.ddae7a35.js",
+    "static/media/videoBg.mp4": "/road_safety/static/media/videoBg.56441fcbb87daf6a532a.mp4",
+    "index.html": "/road_safety/index.html",
+    "main.d15e14b6.css.map": "/road_safety/static/css/main.d15e14b6.css.map",
+    "main.ddae7a35.js.map": "/road_safety/static/js/main.ddae7a35.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d15e14b6.css",
+    "static/js/main.ddae7a35.js"
+  ]
+}
