@@ -65,5 +65,24 @@
 @media screen and (max-width: 1200px){
     .blog iframe{
         margin-top: 1em;
+        /* width: 0%; */
     }
+}
+
+@media screen and (max-width: 560px){
+    .blog iframe{
+        height: 250px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 445px){
+    .blog iframe{
+        height: 200px;
+        width: 300px;
+    }
+}
+
+.blog iframe{
+    border-radius: 10px;
 }

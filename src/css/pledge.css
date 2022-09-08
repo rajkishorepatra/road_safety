@@ -1,6 +1,6 @@
 .pledge{
     background-color: #fed501;
-    height: 40em;
+    height: auto;
     width: 100%;
     /* color: white; */
     /* margin: 10px; */
@@ -24,7 +24,7 @@
 }
 
 .pledge .btn{
-    width: 10em;
+    width: 8em;
     height: 2em;
     border-radius: 40px;
     background-color: #429445;

@@ -9,6 +9,7 @@ import DidYouKnow from './components/didYouKnow';
 import Pledge from './components/pledge';
 import Blog from './components/blog';
 import About from './components/About';
+import Footer from './components/footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Pledge />
         <Blog />
         <About />
+        <Footer/>
       </div>
     </>
   );
