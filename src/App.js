@@ -1,7 +1,6 @@
 // import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-// import '../node_modules/bootstrap/scss';
-// import '../node_modules'
 import Main from './components/main';
 import Navbar from './components/navbar'
 import Why from './components/why';

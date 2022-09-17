@@ -1,13 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/pledge.css'
 import UnderLine from './common/underline'
-// import Modal from './modal'
+// import Axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
 
 function Pledge() {
+
+
+    const [data,setData] = useState([{}])
+    useEffect(()=>{
+        fetch("/data").then(res=>res.json()).then(
+            data=>{
+                setData(data)
+                console.log(data)
+            }
+        )
+    },[])
+
+
+
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -33,27 +47,21 @@ function Pledge() {
                 </div>
             </div>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} className="my-4" onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Take The Pledge</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form>
+                    <Form method='post' action='/acceptData'>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Enter Your Name</Form.Label>
-                            <Form.Control type='text' placeholder='Your Name...' rows={3} />
+                            <input autoFocus className="mx-5" type='text' name='name' id='name' placeholder='Your Name...' />
+                            {/* <Form.Control type='text' name='name' id='name' placeholder='Your Name...' rows={3} /> */}
                         </Form.Group>
-                        <Form.Group
-                            className="mb-3"
-                            controlId="exampleForm.ControlInput1"
-                        >
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" >
                             <Form.Label>Email address</Form.Label>
-                            <Form.Control
-                                type="email"
-                                placeholder="name@example.com"
-                                autoFocus
-                            />
-                            
+                            <input className="mx-5" id='email' name='email' type="email" placeholder="name@example.com" />
+                            {/* <Form.Control id='email' name='email' type="email" placeholder="name@example.com" /> */}
                         </Form.Group>
                     </Form>
                 </Modal.Body>
@@ -61,9 +69,10 @@ function Pledge() {
                     <Button variant="danger" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="warning" onClick={handleClose}>
+                    <Button type='submit' variant="warning" onClick={handleClose}>
                         Submit
                     </Button>
+                    {/* <input type='submit' value='submit'/> */}
                 </Modal.Footer>
             </Modal>
         </>
