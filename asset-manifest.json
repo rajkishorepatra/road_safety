@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/road_safety/static/css/main.a1bfcd04.css",
-    "main.js": "/road_safety/static/js/main.61b0c45a.js",
+    "main.css": "/road_safety/static/css/main.c57d5587.css",
+    "main.js": "/road_safety/static/js/main.2794bada.js",
     "static/media/videoBg.mp4": "/road_safety/static/media/videoBg.56441fcbb87daf6a532a.mp4",
     "static/media/carCrash.png": "/road_safety/static/media/carCrash.febab7fa8102b3b329ba.png",
-    "static/media/raahgiri.png": "/road_safety/static/media/raahgiri.433cc35cec84519772dd.png",
+    "static/media/raahgiri.png": "/road_safety/static/media/raahgiri.bdea0e683ef52b8c47a1.png",
     "static/media/death-sign.png": "/road_safety/static/media/death-sign.1fbbcd6308d33fa1f64b.png",
     "static/media/india.png": "/road_safety/static/media/india.9648b3deec84ea4a10e6.png",
+    "static/media/slick.svg": "/road_safety/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/road_safety/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/road_safety/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/road_safety/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/road_safety/index.html",
-    "main.a1bfcd04.css.map": "/road_safety/static/css/main.a1bfcd04.css.map",
-    "main.61b0c45a.js.map": "/road_safety/static/js/main.61b0c45a.js.map"
+    "main.c57d5587.css.map": "/road_safety/static/css/main.c57d5587.css.map",
+    "main.2794bada.js.map": "/road_safety/static/js/main.2794bada.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1bfcd04.css",
-    "static/js/main.61b0c45a.js"
+    "static/css/main.c57d5587.css",
+    "static/js/main.2794bada.js"
   ]
 }
