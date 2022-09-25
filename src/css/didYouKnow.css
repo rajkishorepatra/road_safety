@@ -1,3 +1,11 @@
-.card-wrapper{
+.card-wrapper {
     display: flex;
+}
+
+.event_card_wrap {
+    margin-top: 80px;
+}
+
+.event_card_wrap>.row {
+    text-align: -webkit-center;
 }

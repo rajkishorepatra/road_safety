@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import '../css/pledge.css'
 import UnderLine from './common/underline'
-// import Axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
@@ -9,17 +8,27 @@ import Modal from 'react-bootstrap/Modal';
 
 function Pledge() {
 
+    const [showImg, setShowImg] = useState(false);
 
-    const [data,setData] = useState([{}])
-    useEffect(()=>{
-        fetch("/data").then(res=>res.json()).then(
-            data=>{
-                setData(data)
-                console.log(data)
-            }
-        )
-    },[])
+    const handleCloseImg = () => setShowImg(false);
+    const handleShowImg = () => setShowImg(true);
 
+    const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        fetch('http://localhost:5000/api/v1/accept-data', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "email": email,
+                "name": name
+            })
+        })
+    }
 
 
     const [show, setShow] = useState(false);
@@ -31,19 +40,32 @@ function Pledge() {
                 <h1 className='text-center mt-5 mb-4 head'>Take The Pledge</h1>
                 <UnderLine />
 
-                <div className="container text-center mt-3">
-                    {/* <div className="row"> */}
-                    <div className="col">
-                        <h2 className='slogan'>Pledge To Drive<br />So Others Survive!</h2>
+                <div className='pledge_data'>
+                    <img src='https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=100' alt='pledge_img' className='pledge_img mb-3' onClick={handleShowImg} />
+
+                    <Modal show={showImg} onHide={handleCloseImg}>
+                        <Modal.Header closeButton>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <img src='https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=100' alt='pledge_img'/>
+                        </Modal.Body>
+                    </Modal>
+
+
+                    <div className='pledge_about'>
+                        <div className="container text-center mt-3">
+                            <div className="col">
+                                <h2 className='slogan'>Pledge To Drive<br />So Others Survive!</h2>
+                            </div>
+                            <div className="col">
+                                <h1 className='mt-4 number'>5200</h1><br />
+                                <h2>Already taken the pledge!</h2>
+                            </div>
+                        </div>
+                        <div className='text-center m-5'>
+                            <button className='btn mb-3' onClick={handleShow}>Take Pledge</button>
+                        </div>
                     </div>
-                    <div className="col">
-                        <h1 className='mt-4 number'>5200</h1><br />
-                        <h2>Already taken the pledge!</h2>
-                    </div>
-                    {/* </div> */}
-                </div>
-                <div className='text-center m-5'>
-                    <button className='btn' onClick={handleShow}>Take Pledge</button>
                 </div>
             </div>
 
@@ -51,29 +73,27 @@ function Pledge() {
                 <Modal.Header closeButton>
                     <Modal.Title>Take The Pledge</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    <Form method='post' action='/acceptData'>
+                <Form method='POST' onSubmit={handleSubmit}>
+                    <Modal.Body>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Enter Your Name</Form.Label>
-                            <input autoFocus className="mx-5" type='text' name='name' id='name' placeholder='Your Name...' />
-                            {/* <Form.Control type='text' name='name' id='name' placeholder='Your Name...' rows={3} /> */}
+                            <Form.Label>Enter Your Name</Form.Label>
+                            <Form.Control autoFocus type='text' name='name' id='name' placeholder='Your Name...' rows={3} onChange={(e) => setName(e.target.value)} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" >
                             <Form.Label>Email address</Form.Label>
-                            <input className="mx-5" id='email' name='email' type="email" placeholder="name@example.com" />
-                            {/* <Form.Control id='email' name='email' type="email" placeholder="name@example.com" /> */}
+                            <Form.Control id='email' name='email' type="email" placeholder="name@example.com" onChange={(e) => setEmail(e.target.value)} />
+                            {/* <input type='submit' variant="warning" /> */}
                         </Form.Group>
-                    </Form>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="danger" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button type='submit' variant="warning" onClick={handleClose}>
-                        Submit
-                    </Button>
-                    {/* <input type='submit' value='submit'/> */}
-                </Modal.Footer>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="danger" onClick={handleClose}>
+                            Close
+                        </Button>
+                        <Button variant="warning" onClick={handleClose} type='submit'>
+                            Submit
+                        </Button>
+                    </Modal.Footer>
+                </Form>
             </Modal>
         </>
     )

@@ -12,6 +12,7 @@ import Footer from './components/footer';
 
 
 function App() {
+  document.body.style.overflowX = "hidden";
   return (
     <>
       <Navbar />
