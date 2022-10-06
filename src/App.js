@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Main from './components/main';
 import Navbar from './components/navbar'
@@ -25,16 +25,19 @@ function App() {
   }, []);
   return (
     <>
-      {loading ? <Loading /> : <><Navbar />
-      <div style={{ backgroundColor: '#f4f4f4' }}>
-        <Main />
-        <Why />
-        <DidYouKnow />
-        <Pledge />
-        <Blog />
-        <About />
-        <Footer/>
-      </div></>}
+      {loading ? <Loading /> :
+        <>
+          <Navbar />
+          <div style={{ backgroundColor: '#f4f4f4' }}>
+            <Main />
+            <Why />
+            <DidYouKnow />
+            <Pledge />
+            <Blog />
+            <About />
+            <Footer />
+          </div>
+        </>}
     </>
   );
 }
