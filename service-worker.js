@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/road_safety/precache-manifest.69da1207361145090a5248d0b909ecd7.js"
+  "/road_safety/precache-manifest.ad3305b3facc5da5cd1c25173fecb950.js"
 );
 
 workbox.clientsClaim();
