@@ -37,7 +37,7 @@ function Pledge() {
     return (
         <>
             <div className='pledge' id='pledge'>
-                <h1 className='text-center mt-5 mb-4 head'>Take The Pledge</h1>
+                <h1 className='text-center mt-5 head'>Take The Pledge</h1>
                 <UnderLine />
 
                 <div className='pledge_data'>
@@ -52,15 +52,15 @@ function Pledge() {
                     </Modal>
 
 
-                    <div className='pledge_about'>
+                    <div className='pledge_about my-auto'>
                         <div className="container text-center mt-3">
                             <div className="col">
-                                <h2 className='slogan'>Pledge To Drive<br />So Others Survive!</h2>
+                                <h2 className='slogan'>Take the pledge to be street smart and make our streets greener, safer and accessible for all. </h2>
                             </div>
-                            <div className="col">
+                            {/* <div className="col">
                                 <h1 className='mt-4 number'>5200</h1><br />
                                 <h2>Already taken the pledge!</h2>
-                            </div>
+                            </div> */}
                         </div>
                         <div className='text-center m-5'>
                             <button className='btn mb-3' onClick={handleShow}>Take Pledge</button>

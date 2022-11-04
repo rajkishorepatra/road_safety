@@ -1,5 +1,5 @@
 .pledge{
-    background-color: #fed501;
+    background: linear-gradient(45deg,#55D284,#F2CF07);
     height: auto;
     width: 100%;
 }
@@ -24,7 +24,7 @@
     width: 8em;
     height: 2em;
     border-radius: 40px;
-    background-color: #429445;
+    background-color: #feb141;
     color: white;
     font-weight: 600;
     font-size: 2em;
