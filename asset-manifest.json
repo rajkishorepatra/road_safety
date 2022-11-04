@@ -1,7 +1,7 @@
 {
   "main.css": "/road_safety/static/css/main.13696f49.chunk.css",
-  "main.js": "/road_safety/static/js/main.4d3179ed.chunk.js",
-  "main.js.map": "/road_safety/static/js/main.4d3179ed.chunk.js.map",
+  "main.js": "/road_safety/static/js/main.9483307e.chunk.js",
+  "main.js.map": "/road_safety/static/js/main.9483307e.chunk.js.map",
   "static/css/1.59676ea4.chunk.css": "/road_safety/static/css/1.59676ea4.chunk.css",
   "static/js/1.879f96de.chunk.js": "/road_safety/static/js/1.879f96de.chunk.js",
   "static/js/1.879f96de.chunk.js.map": "/road_safety/static/js/1.879f96de.chunk.js.map",
@@ -14,9 +14,9 @@
   "static/media/videoBg.mp4": "/road_safety/static/media/videoBg.9620408f.mp4",
   "static/media/raahgiri.png": "/road_safety/static/media/raahgiri.55ea7fa1.png",
   "static/media/cycling.gif": "/road_safety/static/media/cycling.76a39de2.gif",
-  "static/css/main.13696f49.chunk.css.map": "/road_safety/static/css/main.13696f49.chunk.css.map",
   "static/css/1.59676ea4.chunk.css.map": "/road_safety/static/css/1.59676ea4.chunk.css.map",
+  "static/css/main.13696f49.chunk.css.map": "/road_safety/static/css/main.13696f49.chunk.css.map",
   "index.html": "/road_safety/index.html",
-  "precache-manifest.d5e2ad255bc89f62025cfa5052967c01.js": "/road_safety/precache-manifest.d5e2ad255bc89f62025cfa5052967c01.js",
+  "precache-manifest.42d56f929a4483e60b054236965d0158.js": "/road_safety/precache-manifest.42d56f929a4483e60b054236965d0158.js",
   "service-worker.js": "/road_safety/service-worker.js"
 }

@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "4d3179eda04da55ec19d",
+    "revision": "9483307e64daa81b5085",
     "url": "/road_safety/static/css/main.13696f49.chunk.css"
   },
   {
-    "revision": "4d3179eda04da55ec19d",
-    "url": "/road_safety/static/js/main.4d3179ed.chunk.js"
+    "revision": "9483307e64daa81b5085",
+    "url": "/road_safety/static/js/main.9483307e.chunk.js"
   },
   {
     "revision": "879f96de11e0c94326f8",
@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "/road_safety/static/media/india.1be1878b.png"
   },
   {
-    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
-    "url": "/road_safety/static/media/slick.b7c9e1e4.woff"
-  },
-  {
     "revision": "ced611daf7709cc778da928fec876475",
     "url": "/road_safety/static/media/slick.ced611da.eot"
+  },
+  {
+    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
+    "url": "/road_safety/static/media/slick.b7c9e1e4.woff"
   },
   {
     "revision": "d41f55a78e6f49a5512878df1737e58a",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/road_safety/static/media/cycling.76a39de2.gif"
   },
   {
-    "revision": "445d510c50f7180701e0ccb16db9934f",
+    "revision": "157324cd9cb1f66b9fa171fedbf81f88",
     "url": "/road_safety/index.html"
   }
 ];
