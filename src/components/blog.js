@@ -73,7 +73,7 @@ function Blog() {
 
 
                 <div>
-                    <Slider {...settings} className='mb-5'>
+                    <Slider arrows={false} {...settings} className='mb-5'>
                         <div>
                             <div className='blog_data mt-0'>
                                 <img src='https://wri-india.org/sites/default/files/styles/large/public/IMG_4348_0.jpg?itok=u2olvU8_' alt='..' />

@@ -11,14 +11,14 @@
 
 .pledge .slogan{
     font-size: 3em;
-    word-spacing: 8px;
-    letter-spacing: 3px;
+    /* word-spacing: 8px; */
+    /* letter-spacing: 3px; */
 }
 
 
-.pledge .number{
+/* .pledge .number{
     font-size: 7em;
-}
+} */
 
 .pledge .btn{
     width: 8em;
@@ -41,7 +41,7 @@
     /* display: flex; */
     align-items: center;
     width: 60%;
-    margin: 20px;
+    margin: 5px;
 }
 
 .pledge_img{
@@ -53,6 +53,7 @@
     align-items: center;
     width: 40%;
     height: 40em;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1100px) {
@@ -103,5 +104,12 @@
     .pledge .btn{
         width: auto;
         font-size: 1.5em;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .pledge .slogan{
+        font-size: 2em;
     }
 }

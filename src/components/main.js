@@ -9,7 +9,7 @@ function Main() {
                 <div className='overlay'></div>
                 <video src={vdoBg} autoPlay loop muted />
                 <div className='content'>
-                    <h1>#BeStreetSmart</h1>.
+                    <h1>#BeStreetSmart</h1>
                 </div>
             </div>
         </>

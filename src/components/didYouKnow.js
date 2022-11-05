@@ -16,7 +16,7 @@ function DidYouKnow() {
         centerMode: true,
         infinite: true,
         autoplay: true,
-        // nextArrow : true,
+        nextArrow : false,
         centerPadding: "10px",
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -59,7 +59,7 @@ function DidYouKnow() {
                 <UnderLine />
 
                 <div>
-                    <Slider {...settings}>
+                    <Slider arrows={false} {...settings}>
                         <div>
                             <div className="card mx-auto my-3" style={{ width: '18rem' ,boxShadow: 'inset 0px 0px 40px 2px #fed501'}}>
                                 <img src={death_sign} className="card-img-top" alt="..." height={250} />

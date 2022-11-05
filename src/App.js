@@ -15,15 +15,10 @@ import Loading from './components/Loading';
 function App() {
   const [loading, setLoading] = useState(true);
   document.body.style.overflowX = "hidden";
-  if(window.screen.width<1000)
-    document.body.style.overflowX = "hidden";
-
   useEffect(() => {
     setLoading(true);
-    // document.body.style.overflowY = "hidden";
     setTimeout(() => {
       setLoading(false);
-      // document.body.style.overflowY = "scroll";
     }, 5000);
   }, []);
   return (
