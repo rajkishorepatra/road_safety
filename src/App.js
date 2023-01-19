@@ -13,7 +13,7 @@ import Loading from './components/Loading';
 
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   document.body.style.overflowX = "hidden";
   useEffect(() => {
     setLoading(true);
@@ -29,7 +29,7 @@ function App() {
           <div style={{ backgroundColor: '#f4f4f4' }}>
             <Main />
             <Why />
-            {/* <DidYouKnow /> */}
+            <DidYouKnow />
             <Pledge />
             <Blog />
             <About />
