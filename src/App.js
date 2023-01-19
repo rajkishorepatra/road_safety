@@ -29,7 +29,7 @@ function App() {
           <div style={{ backgroundColor: '#f4f4f4' }}>
             <Main />
             <Why />
-            <DidYouKnow />
+            {/* <DidYouKnow /> */}
             <Pledge />
             <Blog />
             <About />

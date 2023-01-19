@@ -1,0 +1,31 @@
+.blogLogo{
+    width: 12vw;
+}
+
+.blogPage .blogPoster{
+    width: 50vw;
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+.blogPage h1{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    color: #ed1b24;
+    font-weight: 650;
+}
+
+@media screen and (max-width: 1000px){
+    .blogLogo{
+        width: 10vh;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .blogPage .blogPoster{
+        width: 70vw;
+    }
+}

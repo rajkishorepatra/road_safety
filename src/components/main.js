@@ -1,5 +1,4 @@
 import React from 'react'
-import vdoBg from '../img/videoBg.mp4'
 import '../css/main.css'
 
 function Main() {
@@ -7,7 +6,7 @@ function Main() {
         <>
             <div className='main'>
                 <div className='overlay'></div>
-                <video src={vdoBg} autoPlay loop muted />
+                <video src="https://ik.imagekit.io/dqe4fvjcky/videoBg1_CUtJ-_9KQ.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1673445492131" muted autoPlay loop/>
                 <div className='content'>
                     <h1>#BeStreetSmart</h1>
                 </div>

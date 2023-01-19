@@ -8,7 +8,6 @@ function Navbar_ele() {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
             <Container>
-                {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mx-auto"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto" style={{fontSize: 20}}>

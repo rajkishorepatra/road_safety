@@ -1,54 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import UnderLine from './common/underline'
 import Slider from "react-slick";
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../css/blog.css'
-import data from './blogModal.json'
+import BlogData from './blogData'
 
 
 function Blog() {
-    const [showBlog1, setShowBlog1] = useState(false);
-    const handleCloseBlog1 = () => setShowBlog1(false);
-    const handleShowBlog1 = () => setShowBlog1(true);
-
-    const [showBlog2, setShowBlog2] = useState(false);
-    const handleCloseBlog2 = () => setShowBlog2(false);
-    const handleShowBlog2 = () => setShowBlog2(true);
-
-    const [setShowBlog3] = useState(false);
-    // const handleCloseBlog3 = () => setShowBlog3(false);
-    const handleShowBlog3 = () => setShowBlog3(true);
-
-    const [setShowBlog4] = useState(false);
-    // const handleCloseBlog4 = () => setShowBlog4(false);
-    const handleShowBlog4 = () => setShowBlog4(true);
-
-    // const handleCloseBlog5 = () => setShowBlog5(false);
-    // const handleShowBlog5 = () => setShowBlog5(true);
-
-    // const handleCloseBlog6 = () => setShowBlog6(false);
-    // const handleShowBlog6 = () => setShowBlog6(true);
-
-    // const handleCloseBlog7 = () => setShowBlog7(false);
-    // const handleShowBlog7 = () => setShowBlog7(true);
-
-    // const handleCloseBlog8 = () => setShowBlog8(false);
-    // const handleShowBlog8 = () => setShowBlog8(true);
-
-    // const handleCloseBlog9 = () => setShowBlog9(false);
-    // const handleShowBlog9 = () => setShowBlog9(true);
-
-    // const handleCloseBlog10 = () => setShowBlog10(false);
-    // const handleShowBlog10 = () => setShowBlog10(true);
     const settings = {
         dots: true,
         infinite: true,
         speed: 1000,
         autoplay: true,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnHover: true,
         responsive: [
@@ -58,9 +23,7 @@ function Blog() {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true,
-                    // vertical: true,
-                    // verticalSwiping: true,
+                    dots: true
                 }
             }]
     };
@@ -68,25 +31,31 @@ function Blog() {
     return (
         <>
             <div className='blog' id='blogs'>
-                <h1 className='text-center mt-5' style={{color: '#ed1b24'}}>Blogs</h1>
+                <h1 className='text-center mt-5' style={{ color: '#ed1b24' }}>Blogs</h1>
                 <UnderLine />
 
 
                 <div>
                     <Slider arrows={false} {...settings} className='mb-5'>
                         <div>
-                            <div className='blog_data mt-0'>
-                                <img src='https://wri-india.org/sites/default/files/styles/large/public/IMG_4348_0.jpg?itok=u2olvU8_' alt='..' />
-                                <div className='blog_about mx-5'>
-                                    <h5><b><span id='blg1t'>Saving lives through investments in public bus systems</span></b></h5>
-                                    <p id='blg1p'>India suffers from the highest burden of road crashes, contributing to nearly 10% of global road deaths. In just the last decade (2008-2017), road crashes in India have increased by 23%, with an average annual increase of about 2% every year. The problem is particularly acute in urban areasThe problem is particularly acute in urban areas, which witness nearly 42% of all crashes in the...</p>
-                                    <div className='text-left '>
-                                        <button className='btn' onClick={handleShowBlog1}>READ MORE</button>
-                                    </div>
-                                </div>
+                            <div className='blog_data m-auto' >
+                                <img src={BlogData[0].img} alt='..' className='m-auto' />
+                                <h5 className='mt-3'><b>{BlogData[0].title}</b></h5>
+                                <button className='btn' onClick={() => {
+                                window.location.href = "https://raahgirifoundation.org/beyond-physical-injuries-the-unseen-trauma-of-road-crashes/"
+                            }}>READ MORE</button>
                             </div>
                         </div>
                         <div>
+                            <div className='blog_data m-auto' >
+                                <img src={BlogData[1].img} alt='..' className='m-auto' />
+                                <h5 className='mt-3'><b>{BlogData[1].title}</b></h5>
+                                <button className='btn' onClick={() => {
+                                window.location.href = "https://raahgirifoundation.org/redefining-what-it-means-to-be-street-smart/"
+                            }}>READ MORE</button>
+                            </div>
+                        </div>
+                        {/* <div>
                             <div className='blog_data mt-0'>
                                 <div className='blog_about mx-5'>
                                     <h5><b><span>Design elements to rejuvenate Indian Streets: A case of Bellasis Road, Mumbai</span></b></h5>
@@ -125,7 +94,7 @@ function Blog() {
                                 </div>
                                 <img src='https://wri-india.org/sites/default/files/styles/large/public/featured_amit.jpeg?itok=AaF7c001' alt='..' />
                             </div>
-                        </div>
+                        </div> */}
                         {/* <div>
                             <h3>5</h3>
                         </div>
@@ -135,11 +104,17 @@ function Blog() {
                     </Slider>
                 </div>
 
-                <Modal show={showBlog1} className="my-4" onHide={handleCloseBlog1}>
+                {/* <Modal show={showBlog1} className="my-4 modal-lg" onHide={handleCloseBlog1}>
                     <Modal.Header closeButton>
                         <Modal.Title><b>{data[0].title}</b></Modal.Title>
                     </Modal.Header>
-                    <Modal.Body className="overflow-auto">{data[0].desc}</Modal.Body>
+                    <Modal.Body className="overflow-auto">Wounds get healed, bills get paid off, and life moves on but there’s more to road accidents than what meets the eye. Though often overlooked, the mental scars that lie beneath bloodied wounds deserve just as much attention as the physical ones. These scars take a long time to heal and sometimes, due to a lack of proper response, they also have the potential to develop into lifelong disorders or phobias.
+                        Anyone who has ever been involved in a road accident knows what extreme emotions they can bring about. The adrenaline rush at the time of the accident, followed by the feeling of numbness to the point that even your memory gets hazy. Not only do accidents often result in physical damage to life and property, but they also bring about the grief of loss. It is tempting to view the recovery of physical wounds as the end of the traumatic event, but the reality is that the psychological effects can linger long after the physical ones have healed. Unfortunately, statistics show that this is often the case.
+                        According to one recent study conducted by British researchers, at least one-third of all individuals engaged in nonfatal accidents experience post-traumatic stress disorder (PTSD), persistent anxiety, sadness, and phobias even a year after the incident. Ironically, post-crash care is often oblivious to these aspects. For instance, PTSD is remarkably prevalent in road crash survivors. Numerous emotional repercussions, such as depression, anxiety, disruptions in sleep cycles, difficulty controlling anger, flashbacks, and even a sense of humiliation can emerge from this. If not directly, road crashes can indirectly create scenarios that not only limit a person’s opportunities but also make them vulnerable to various emotional burdens.
+                        Many serious wounds leave a person permanently disabled or disfigured which could force one to settle for a job that pays little or operates part-time, or not be able to work at all. Additionally, road crashes are more burdening on people coming from middle and low-income households. In rural areas, it is often the breadwinner (most often a male) of the family who leaves the home to earn a living, thereby increasing the risk of being involved in an accident. Not only does such an accident put their family's survival at stake but also creates an additional burden of medical expenses. It's possible that crash survivors might need external help doing their chores or that they may need full-time care, as a consequence of the accident. This often leads to a  turbulent financial situation that adds to the misery of the accidents.
+                        It is difficult to calculate the future hospital expenses, home care fees and potentially lost wages. Even though they do not lose their lives, people bear the brunt of that one accident for a lifetime. Further, after a road accident lawsuit is resolved, many serious injuries necessitate continuous treatment. After an amputation, one may be required to change prostheses more than once in their lifetime. Bed sores, infections, and other consequences that require medical attention could result from a debilitating spinal cord injury. Therefore, restricting our assessment of a road crash survivor’s recovery only to the healing of his physical wounds is only half the story. We need to make room in our conversations for the terrible emotional damage that a road crash can leave behind.
+                        The objective is not to underplay the importance of physical impacts but to add another dimension, a rather underrepresented one, to our conversations regarding road safety. It is imperative to provide quick trauma care  to ensure that the crash doesn’t prove to be fatal. In fact, in many cases, it is the nature and severity of the physiological impacts that directly influence the victim’s short and long-term mental health. It is essential to normalize that certain road crash victims can require therapy and may experience injury-related symptoms up to many years after the incident. Recovery from a vehicle accident involves assessing the severity of the damage and any prospective long-term bodily implications and it is high time we kept the psychological burdens of road crashes on the same mantle as that of the physical burdens.
+                        </Modal.Body>
                     <Modal.Footer>
                         <Button variant="danger" onClick={handleCloseBlog1}>
                             Close
@@ -157,10 +132,10 @@ function Blog() {
                             Close
                         </Button>
                     </Modal.Footer>
-                </Modal>
+                </Modal> */}
 
 
-                <div className="container text-center mx-auto">
+                {/* <div className="container text-center mx-auto">
                     <div className="row">
                         <div className="col">
                             <iframe width="500" height="300" src="https://www.youtube.com/embed/7TESgUA-JW4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -181,7 +156,7 @@ function Blog() {
                             <iframe width="500" height="300" src="https://www.youtube.com/embed/V9AFfjesOb4?start=3" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     )
