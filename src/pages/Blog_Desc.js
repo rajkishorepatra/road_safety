@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import BlogData from '../components/blogData';
-// import raahgiriLogo from '../img/raahgiri_white.png'
 import '../css/Blog_Desc.css'
 import Footer from '../components/footer';
 import UnderLine from '../components/common/underline';
@@ -26,7 +25,6 @@ function Blog_Desc() {
           <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
               <Container>
-                {/* <Navbar.Brand href="/"><img src='' alt='' className='blogLogo' /></Navbar.Brand> */}
                 <Nav className="justify-content-end" style={{ fontSize: 20 }}>
                   <Nav.Link href="/" className='ms-4'>#BeStreetSmart</Nav.Link>
                 </Nav>

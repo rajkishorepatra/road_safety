@@ -1,12 +1,8 @@
 .blog_data{
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
-    
-    /* width: 60%; */
-    /* flex: 0 0 auto; */
 }
 
 .blog_data .btn{
@@ -39,7 +35,6 @@
 
     .blog_data img{
         display: block;
-        /* width: 80%; */
         margin: auto;
         order: 1;
     }
@@ -62,7 +57,6 @@
 @media screen and (max-width: 1200px){
     .blog iframe{
         margin-top: 1em;
-        /* width: 0%; */
     }
 }
 

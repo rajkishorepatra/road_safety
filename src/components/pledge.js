@@ -24,19 +24,6 @@ function Pledge() {
         })
             .catch(err => console.log(err))
     }
-    // function handleSubmit(e) {
-    //     e.preventDefault();
-    //     fetch('http://localhost:5000/api/v1/accept-data', {
-    //         method: 'post',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({
-    //             "email": email,
-    //             "name": name
-    //         })
-    //     })
-    // }
 
 
     const [show, setShow] = useState(false);
@@ -71,12 +58,10 @@ function Pledge() {
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Enter Your Name</Form.Label>
                             <Form.Control autoFocus type='text' name='name' id='name' placeholder='Your Name...' rows={3} />
-                            {/* onChange={(e) => setName(e.target.value)}  value={name}/> */}
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" >
                             <Form.Label>Email address</Form.Label>
                             <Form.Control id='email' name='email' type="email" placeholder="name@example.com" />
-                            {/* onChange={(e) => setEmail(e.target.value)} value={email}/> */}
                         </Form.Group>
                     </Modal.Body>
                     <Modal.Footer>

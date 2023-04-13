@@ -1,21 +1,13 @@
 .loading {
   z-index: 1000;
-  /* background-color: #fff; */
-  /* position: fixed; */
   top: 0;
-  /* left: 0; */
-  /* right: 0; */
   width: 100vw;
   height: 100vh;
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center; */
   background-color: white;
 }
 
 .loading .loader {
-  /* margin: auto; */
-  /* align-items: center; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +26,4 @@
     100% {
       left: 350%;
     }
-    /* 100%{
-      left: -10%;
-    } */
   }
